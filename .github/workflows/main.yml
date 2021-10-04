@@ -52,9 +52,9 @@ jobs:
           command: |
             cd /tmp
             ls -a
-            echo "env_var:$FIRST_NAME"
+            
             exit 1
           host: 13.127.45.141
-          user: root
+          user: ubuntu
           key: ${{ secrets.PRIVATE_KEY}}      
 
