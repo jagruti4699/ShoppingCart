@@ -46,5 +46,15 @@ jobs:
           tags: latest
 
             
-            
+      - name: ls -a via OPEN SSH Private Key
+        uses: jagruti4699/ShoppingCart@master
+        with:
+          command: |
+            cd /tmp
+            ls -a
+            echo "env_var:$FIRST_NAME"
+            exit 1
+          host: 13.127.45.141
+          user: root
+          key: ${{ secrets.PRIVATE_KEY}}      
 
