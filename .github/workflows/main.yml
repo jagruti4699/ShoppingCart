@@ -53,7 +53,7 @@ jobs:
             cd /tmp
             ls -a
             
-            exit 1
+            
           host: 13.127.45.141
           user: ubuntu
           key: ${{ secrets.PRIVATE_KEY}}      
