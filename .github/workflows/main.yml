@@ -47,7 +47,7 @@ jobs:
 
             
       - name: ls -a via OPEN SSH Private Key
-        uses: jagruti4699/ShoppingCart@master
+        uses: fifsky/ssh-action@master
         with:
           command: |
             cd /tmp
