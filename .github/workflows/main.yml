@@ -46,7 +46,7 @@ jobs:
           tags: latest
 
             
-      - name: ls -a via OPEN SSH Private Key
+      - name: deploy to comtainer
         uses: fifsky/ssh-action@master
         with:
           command: |
