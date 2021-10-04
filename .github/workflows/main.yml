@@ -50,8 +50,8 @@ jobs:
         uses: fifsky/ssh-action@master
         with:
           command: |
-            cd /tmp
-            ls -a
+                sh "ssh -o StrictHostKeyChecking=no ubuntu@13.127.45.141 docker rm -f shoppingcartcontainer || true"
+                sh "ssh -o StrictHostKeyChecking=no ubuntu@13.127.45.141 docker run -d -p 8080:8080 --name shoppingcartcontainer 46990406/image-githubaction"
             
             
           host: 13.127.45.141
