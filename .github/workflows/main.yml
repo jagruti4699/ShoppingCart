@@ -52,7 +52,7 @@ jobs:
         
             
           host: 13.127.45.141
-          user: root
+          user: ubuntu
           key: ${{ secrets.PRIVATE_KEY}} 
           port: 22
           script: |
