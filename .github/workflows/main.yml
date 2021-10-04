@@ -49,14 +49,13 @@ jobs:
       - name: deploy to comtainer
         uses: fifsky/ssh-action@master
         with:
-          command: |
+        
             
           host: 13.127.45.141
           user: ubuntu
           key: ${{ secrets.PRIVATE_KEY}} 
           port: 22
           script: |
-            command: |
                 sh "ssh -o StrictHostKeyChecking=no ubuntu@13.127.45.141 docker rm -f shoppingcartcontainer || true"
                 sh "ssh -o StrictHostKeyChecking=no ubuntu@13.127.45.141 docker run -d -p 8080:8080 --name shoppingcartcontainer 46990406/image-githubaction"
 
