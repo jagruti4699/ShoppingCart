@@ -55,7 +55,7 @@ jobs:
           user: ubuntu
           key: ${{ secrets.PRIVATE_KEY}} 
           
-          script: |
+          command: |
                 sh "docker rm -f shoppingcartcontainer || true"
                 sh "docker run -d -p 8080:8080 --name shoppingcartcontainer 46990406/image-githubaction"
 
