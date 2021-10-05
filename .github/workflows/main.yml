@@ -53,6 +53,7 @@ jobs:
         
           
           command: |
+              docker rm -f shoppingcartcontainer || true
               docker run -d -p 8080:8080 --name shoppingcartcontainer 46990406/image-githubaction
 
           host: 13.127.45.141
