@@ -42,7 +42,7 @@ jobs:
         with:
           username: 46990406
           password: 04june1999
-          repository: 46990406/image-githubaction:$(date +%s)
+          repository: 46990406/image-githubaction
           tags: latest
 
             
