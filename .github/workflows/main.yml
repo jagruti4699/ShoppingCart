@@ -47,16 +47,15 @@ jobs:
 
             
       - name: deploy to comtainer
+        if: always()
         uses: fifsky/ssh-action@master
         with:
         
-            
+          
+          command: |
+              docker run -d -p 8080:8080 --name shoppingcartcontainer 46990406/image-githubaction
+
           host: 13.127.45.141
           user: ubuntu
           key: ${{ secrets.PRIVATE_KEY}} 
           
-          command: |
-                sh "docker rm -f shoppingcartcontainer || true"
-                sh "docker run -d -p 8080:8080 --name shoppingcartcontainer 46990406/image-githubaction"
-
-
